@@ -1,0 +1,83 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPc7jBV00ahOa7BR8VYdM/Q",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yrasool/GitHubWorkshop/blob/main/BASIC%20NEURAL%20NETWORK\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "boIp2Hd9280i"
+      },
+      "outputs": [],
+      "source": [
+        "import matplotlib as plt\n",
+        "import tensorflow as tf\n",
+        "from tensorflow.keras import models, layers, optimizers, losses, metrics\n",
+        "from tensorflow.keras.utilis import to_categorical\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# normalization\n",
+        "mean = train_data.mean(axis=0)\n",
+        "train_data -= mean\n",
+        "std = trains_data.std(axis=0)\n",
+        "#If we don't center the data and feed it directly into the model\n",
+        "#with these original values, the scale of the \"Income\" feature is\n",
+        "# much larger than the scale of the \"age\" feature. The \"Income\" values are in the tens of thousands, while the \"Age\" values are in the tens. The model may interpret these large numerical values as more important than the smaller ones,\n",
+        "#and this could lead to biased or suboptimal results."
+      ],
+      "metadata": {
+        "id": "sKDQng6l9a0F"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "model = model.Sequential()# this line initializes a sequential model which\n",
+        "# is a linear stack of layers\n",
+        "model.add(layers.Dense(512, actvation = 'relu', input_shape = (28*28, )))\n",
+        "#we add a dense layer with 512 units (neurons) and a ReLU activation function. The input_shape parameter specifies the shape of the input data.\n",
+        "#In this case, the input data is flattened images of size 28x28 pixels,\n",
+        "#so the input shape is (28 * 28,). The dense layer is fully connected, meaning each neuron is connected to every input feature.\n",
+        "model.add(layers.Dense(10, activation = \"softmax\"))\n",
+        "#the final dense layer has 10 units which correspond to the number of output classes.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "515TluNc9Z-U"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
